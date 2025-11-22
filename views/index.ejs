@@ -1,0 +1,33 @@
+<div class="row align-items-center">
+  <div class="col-lg-7">
+    <h1 class="display-6 mb-3">Interprète assermenté – <%= profile.courAppel %></h1>
+    <p class="lead">Prestation officielle pour vos démarches: traduction certifiée conforme et interprétariat. Français ↔ Arabe.</p>
+    <ul class="list-unstyled lh-lg">
+      <li>Nom: <strong><%= profile.nom %> <%= profile.prenom %></strong></li>
+      <li>Téléphone: <a href="tel:<%= profile.telephone %>"><%= profile.telephone %></a></li>
+      <li>Ville: <strong><%= profile.ville %> (<%= profile.cp %>)</strong></li>
+      <li>Assermentation: <strong>Oui</strong>, près de la <strong><%= profile.courAppel %></strong></li>
+      <li>Langues: <strong><%= profile.langues.join(' & ') %></strong></li>
+      <li>Combinaisons: <strong><%= profile.combinaisons.join(' / ') %></strong></li>
+      <li>Formation: <%= profile.formation %></li>
+    </ul>
+    <div class="d-flex gap-2 mt-3">
+      <a class="btn btn-primary" href="/commander">Demander un devis</a>
+      <a class="btn btn-outline-secondary" href="/services">Voir les services</a>
+    </div>
+  </div>
+  <div class="col-lg-5">
+    <div class="p-3 border rounded-3 bg-light">
+      <h2 class="h5">Documents officiels pris en charge</h2>
+      <ul>
+        <li>Acte de naissance</li>
+        <li>Acte de mariage</li>
+        <li>Casier judiciaire</li>
+        <li>Diplômes et relevés</li>
+        <li>Permis de conduire</li>
+        <li>Documents d’état civil et administratifs</li>
+      </ul>
+      <p class="mb-0">Traductions certifiées conformes pour usage auprès d’administrations et tribunaux.</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="alert alert-success">
+  <h1 class="h5 mb-1">Demande envoyée</h1>
+  <p class="mb-0">Référence: <strong><%= reference %></strong></p>
+</div>
+
+<% if (montant) { %>
+  <p>Règlement immédiat proposé: <strong><%= montant %> €</strong>.</p>
+  <a href="<%= payUrl %>" class="btn btn-success" target="_blank" rel="noopener">Payer maintenant via Revolut</a>
+<% } else { %>
+  <p>Vous pouvez régler après validation du devis.</p>
+  <a href="<%= profile.revolutBase %>" class="btn btn-outline-success" target="_blank" rel="noopener">Lien Revolut</a>
+<% } %>
+
+<div class="mt-4">
+  <a href="/" class="btn btn-link">Retour à l’accueil</a>
+</div>

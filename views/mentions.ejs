@@ -1,0 +1,7 @@
+<h1 class="h4 mb-3"><%= title %></h1>
+<p>Professionnel: <strong><%= profile.nom %> <%= profile.prenom %></strong>, interprète assermenté près de la <%= profile.courAppel %>.</p>
+<p>Contact: <a href="tel:<%= profile.telephone %>"><%= profile.telephone %></a></p>
+<p>Ville: <%= profile.ville %> (<%= profile.cp %>)</p>
+<p>Langues d’expertise: <%= profile.langues.join(' / ') %>. Combinaisons: <%= profile.combinaisons.join(' / ') %>.</p>
+<p>Formation: <%= profile.formation %>.</p>
+<p class="text-muted">SIRET: non communiqué.</p>
